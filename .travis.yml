@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+  - node
+  - lts/*
+before_install:
+  - yarn add global codecov
+  - yarn add html-pdf
+script:
+  - yarn test test
+after_success: codecov

@@ -1,0 +1,393 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        title=invoice_header_title
+    body
+        style.
+            @import "https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700";
+
+            html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, total, time, mark, audio, video {
+                margin: 0;
+                padding: 0;
+                border: 0;
+                font-size: 100%;
+                font: inherit;
+                vertical-align: baseline;
+            }
+
+            article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+                display: block;
+            }
+
+            body {
+                line-height: 1;
+                overflow-wrap: break-word;
+            }
+
+            ol, ul {
+                list-style: none;
+            }
+
+            blockquote, q {
+                quotes: none;
+            }
+
+            blockquote:before, blockquote:after, q:before, q:after {
+                content: '';
+                content: none;
+            }
+
+            table {
+                border-collapse: collapse;
+                border-spacing: 0;
+            }
+
+            body {
+                height: 842px;
+                width: 595px;
+                margin: auto;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 12px;
+            }
+            p h3 h4 {
+                overflow-wrap: break-word;
+            }
+
+            strong {
+                font-weight: 700;
+            }
+
+            #container {
+                position: relative;
+                padding: 4%;
+            }
+
+            #header {
+                height: 100px;
+            }
+
+            #header > #reference {
+                float: right;
+                text-align: right;
+                width: 45%;
+            }
+
+            #header > #reference h3 {
+                margin: 0;
+            }
+
+            #header > #reference h4 {
+                margin: 0;
+                font-weight: 600
+            }
+
+            #header > #reference p {
+                margin-top: 2%;
+            }
+
+            #header > #logo {
+                width: 48%;
+                float: left;
+            }
+
+            #to {
+                margin-top: 50px;
+                height: 160px;
+            }
+
+            #title {
+                float: left;
+                text-align: "left"
+            }
+
+            #title h3 {
+                font-size: 18px;
+                margin-top: 4px;
+            }
+
+            #title h4 {
+                margin-top: 4px;
+                font-weight: 600
+            }
+
+            #title p {
+                margin-top: 4px;
+                
+            }
+
+            #to > #bill, #to > #ship {
+                width: 45%;
+                min-height: 90px;
+                padding: 1.5%;
+                line-height: 120%;
+                margin-top: 4px;
+            }
+
+            #to > #bill {
+                float: left;
+                background: #efefef;
+            }
+
+            #to > #ship {
+                float: right;
+                border: solid #ccc 1px;
+            }
+
+            
+            #to > #bill_title, #to > #ship_title {
+                width: 45%;
+            }
+
+            #to > #bill_title {
+                float: left;
+                margin: 0;
+                padding: 0;
+            }
+
+            #to > #ship_title {
+                float: right;
+                margin: 0;
+                padding: 0 3%;
+            }
+
+            #items > p {
+                text-align: right;
+                margin-bottom: 1%;
+                font-size: 85%
+            }
+
+            #other > p {
+                margin-top: 1%; 
+            }
+
+            #items > table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            #items > table, th, td {
+                border: 1px solid #ccc;
+                border-collapse: collapse;
+            }
+
+            #items > table th:first-child {
+                padding-top: 10px;
+                padding-bottom: 10px;
+                padding-left: 1%;
+                text-align: left;
+            }
+
+            #items > table th {
+                font-weight: 500;
+                padding: 1px 4px;
+                background-color: #efefef;
+            }
+
+            #items > table td {
+                padding: 1px 4px;
+            }
+
+            #items > table th:nth-child(2), #items > table th:nth-child(4) {
+                width: 60px;
+            }
+
+            #items > table th:nth-child(3) {
+                width: 60px;
+            }
+
+            #items > table th:nth-child(5) {
+                width: 80px;
+            }
+
+            #items > table tr td:not(:first-child) {
+                text-align: center;
+                padding-right: 1%;
+            }
+
+            #items table tr td {
+                padding-top: 10px;
+                padding-bottom: 10px;
+                height: 10px;
+            }
+
+            #items table tr th {
+                padding: 3px;
+            }
+
+            td {
+                word-break: break-word;
+            }
+
+            #items table tr:nth-child(2) > td {
+                padding-top: 8px;
+            }
+
+            #summary {
+                height: 155px;
+                margin-top: 30px;
+            }
+
+            #summary #note {
+                float: left;
+                width: 260px;
+            }
+
+            #summary #note h4 {
+                font-size: 10px;
+                font-weight: 600;
+                margin-bottom: 4px;
+            }
+
+            #summary #note p {
+                font-size: 10px;
+                line-height:12px;
+            }
+
+            #summary #total table {
+                width: 260px;
+                float: right;
+            }
+
+            #summary #total table td {
+                padding: 3px 4px;
+            }
+
+            #summary #total table tr td:last-child {
+                text-align: right;
+            }
+
+            #summary #total table tr:nth-child(6) {
+                background: #efefef;
+                font-weight: 600;
+            }
+
+            #footer {
+                margin: auto;
+                position: absolute;
+                left: 4%;
+                bottom: 20px;
+                right: 4%;
+                border-top: solid #ccc 1px;
+            }
+
+            #footer p {
+                margin-top: 1%;
+                font-size: 85%;
+                line-height: 140%;
+                text-align: center;
+            }
+
+            .padding-table {
+                margin-top: 60px;
+            }
+        #container
+            #header
+                #logo
+                    img(src=logo, alt='', height="80px", width="100%", max-width="200px")
+                #reference
+                    p
+                        strong=emitter_name
+                    p #{emitter_street_number} #{emitter_street_name}
+                    p #{emitter_zip_code} #{emitter_city}, #{emitter_country}
+                    p #{emitter_phone}
+                    p #{emitter_mail}
+            
+            #title
+                h3
+                    strong=invoice_header_title
+                p #{invoice_header_reference} #{invoice_number}
+                p #{invoice_header_date} #{header_date}
+            <br/>
+            <br/>
+            #to
+                #bill_title
+                    strong=billto
+                #ship_title
+                    strong=shipto
+                #bill
+                    p
+                        strong=billing_company
+                        br
+                        |       #{billing_first_name} #{billing_last_name}
+                        br
+                        |       #{billing_street_number} #{billing_street_name}
+                        br
+                        |       #{billing_zip_code} #{billing_city}, #{billing_country}
+                        br   
+                        br
+                        |       #{billing_phone ? fromto_phone : ''} #{billing_phone}
+                        br
+                        |       #{billing_mail ? fromto_mail : ''} #{billing_mail}
+                
+                #ship
+                    p
+                        strong=shipping_company
+                        br
+                        |       #{shipping_first_name} #{shipping_last_name}
+                        br
+                        |       #{shipping_street_number} #{shipping_street_name}
+                        br
+                        |       #{shipping_zip_code} #{shipping_city}, #{shipping_country}
+                        br
+                        br
+                        |       #{shipping_phone ? fromto_phone : ''} #{shipping_phone}
+                        br
+                        |       #{shipping_mail ? fromto_mail : ''} #{shipping_mail}
+            #items
+                p #{payment_method_title} #{payment_method}
+                p #{currency_title} #{currency.name}
+                - var rowCounter = 0
+                - for(var loopTable = 0; loopTable < template_configuration.loop_table; loopTable++) {
+                table(class=(loopTable === 0 ? '' : 'padding-table'))
+                    tr
+                        th=table_description
+                        th=table_product_price
+                        th=table_quantity
+                        th=table_total_product
+
+                        - var rowPerPage = 0
+                        if loopTable === 0
+                            - rowPerPage = template_configuration.rows_in_first_page
+                        else if loopTable === (template_configuration.loop_table - 1)
+                            - rowPerPage = template_configuration.rows_in_last_page
+                        else
+                            - rowPerPage = template_configuration.rows_per_pages
+
+                        - for(var row = 0; row <= rowPerPage; row++) {
+                        tr
+                            td #{articles[rowCounter] && articles[rowCounter].description ? articles[rowCounter].description : ''}
+                            td #{articles[rowCounter] && articles[rowCounter].price ? `${currency.symbol} ${articles[rowCounter].price}` : ''}
+                            td #{articles[rowCounter] && articles[rowCounter].qt ? articles[rowCounter].qt : ''}
+                            td #{articles[rowCounter] && articles[rowCounter].total_product ? `${currency.symbol} ${articles[rowCounter].total_product}` : ''}
+                        - rowCounter++
+                        - }
+
+                        if loopTable > 0
+                            div(style='page-break-after:always')
+                - }
+            #summary
+                #note
+                    h4=table_note
+                    p=table_note_content
+                #total
+                    table(border='1')
+                        tr
+                            td=table_subtotal
+                            td=`${currency.symbol} ${subtotal}`
+                        tr
+                            td=`${table_discount} (${discount}%)`
+                            td=`- ${currency.symbol} ${total_discount}`
+                        tr
+                            td=table_shipping
+                            td=`${currency.symbol} ${shipping_price}`
+                        tr
+                            td=table_total_vat
+                            td=`${currency.symbol} ${total_vat}`
+                        tr
+                            td=table_total_exc_vat
+                            td=`${currency.symbol} ${total_exc_vat}`
+                        tr
+                            td=table_total_inc_vat
+                            td=`${currency.symbol} ${total_inc_vat}`
+            #footer
+                p #{vat_number_title} #{vat_number}
