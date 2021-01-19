@@ -73,15 +73,6 @@ html(lang='en')
                 width: 45%;
             }
 
-            #header > #reference h3 {
-                margin: 0;
-            }
-
-            #header > #reference h4 {
-                margin: 0;
-                font-weight: 600
-            }
-
             #header > #reference p {
                 margin-top: 2%;
             }
@@ -91,14 +82,9 @@ html(lang='en')
                 float: left;
             }
 
-            #to {
-                margin-top: 50px;
-                height: 160px;
-            }
-
             #title {
                 float: left;
-                text-align: "left"
+                text-align: "left";
             }
 
             #title h3 {
@@ -108,17 +94,21 @@ html(lang='en')
 
             #title h4 {
                 margin-top: 4px;
-                font-weight: 600
+                font-weight: 600;
             }
 
             #title p {
                 margin-top: 4px;
-                
+            }
+            
+            #to {
+                margin-top: 50px;
+                height: 150px;
             }
 
             #to > #bill, #to > #ship {
                 width: 45%;
-                min-height: 90px;
+                min-height: 100px;
                 padding: 1.5%;
                 line-height: 120%;
                 margin-top: 4px;
@@ -127,13 +117,13 @@ html(lang='en')
             #to > #bill {
                 float: left;
                 background: #efefef;
+                border: solid #efefef 1px;
             }
 
             #to > #ship {
                 float: right;
                 border: solid #ccc 1px;
             }
-
             
             #to > #bill_title, #to > #ship_title {
                 width: 45%;
@@ -157,10 +147,6 @@ html(lang='en')
                 font-size: 85%
             }
 
-            #other > p {
-                margin-top: 1%; 
-            }
-
             #items > table {
                 width: 100%;
                 border-collapse: collapse;
@@ -179,7 +165,7 @@ html(lang='en')
 
             #items > table th {
                 font-weight: 500;
-                padding: 1px 4px;
+                padding: 10px 4px;
                 background-color: #efefef;
             }
 
@@ -208,10 +194,6 @@ html(lang='en')
                 padding-top: 10px;
                 padding-bottom: 10px;
                 height: 10px;
-            }
-
-            #items table tr th {
-                padding: 3px;
             }
 
             td {
@@ -265,7 +247,7 @@ html(lang='en')
                 margin: auto;
                 position: absolute;
                 left: 4%;
-                bottom: 20px;
+                bottom: 10px;
                 right: 4%;
                 border-top: solid #ccc 1px;
             }

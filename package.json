@@ -1,6 +1,6 @@
 {
   "name": "@ahbbvc/invoice-generator",
-  "version": "1.0.3",
+  "version": "1.0.9",
   "description": "Invoice generator",
   "license": "MIT",
   "main": "dist/index.js",

@@ -507,8 +507,6 @@ export default class Generator extends Common {
   _toPDF(keys, params = []) {
     const pdf = htmlPDF.create(this._toHTML(keys, params).html, {
       timeout: "90000",
-      width: "210mm",
-      height: "297mm",
     });
     return {
       pdf,
@@ -588,12 +586,11 @@ export default class Generator extends Common {
 
   // split at 19 articles
   _templateConfiguration() {
-    const template_rows_per_page = 19; // first page if more than 14 articles
+    const template_rows_per_page = 10; // first page if more than 14 articles
     const templateConfig = {
-      rows_in_first_page:
-        this.article.length > 14 ? template_rows_per_page : 14,
-      rows_per_pages: 28,
-      rows_in_last_page: 20,
+      rows_in_first_page: this.article.length > 5 ? template_rows_per_page : 5,
+      rows_per_pages: 20,
+      rows_in_last_page: 15,
     };
 
     let nbArticles = this.article.length;
